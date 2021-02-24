@@ -7,3 +7,44 @@
 #greeting-container {
   margin-top: 20px;
 }
+
+body {
+    background-color: #444444;
+}
+
+p {
+    color: #FFFFFF;
+}
+
+a {
+    color: #FF7300;
+}
+
+h1 {
+    color: #FF7300;
+}
+
+h2 {
+    color: #FF7300;
+}
+
+h3 {
+    color: #FF7300;
+}
+
+h4 {
+    color: #FF7300;
+}
+
+li {
+    color: #FFFFFF;
+}
+
+ul {
+    color: #FFFFFF;
+}
+
+#funFacts-container {
+    color: #FFFFFF;
+}
+
