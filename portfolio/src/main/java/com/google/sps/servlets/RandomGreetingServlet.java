@@ -14,6 +14,7 @@
 
 package com.google.sps.servlets;
 
+
 import java.io.IOException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -33,10 +34,23 @@ public class RandomGreetingServlet extends HttpServlet {
 
     // Randomly selects the index for the greeting that'll appear on the page
     int greetingChosen = rand.nextInt(4); 
-    response.setContentType("text/html;");
-    //response.getWriter().println("<h1>Random Greeting</h1>");
-    response.getWriter().println(greetings[greetingChosen]);
+    
 
+    // Convert the server stats to JSON
+    String json = convertToJson(greetings, greetingChosen);
+
+    // Send the JSON as the response
+    response.setContentType("application/json;");
+    response.getWriter().println(json);
+
+  }
+
+  private String convertToJson(String[] greets, int chosenGreet) {
+    String json = "{";
+    json += "\"greetMessage\": ";
+    json += "\"" + greets[chosenGreet] + "\"";
+    json += "}";
+    return json;
   }
 
 }
