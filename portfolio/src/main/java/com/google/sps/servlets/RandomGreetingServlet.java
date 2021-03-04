@@ -34,8 +34,8 @@ public class RandomGreetingServlet extends HttpServlet {
     // Randomly selects the index for the greeting that'll appear on the page
     int greetingChosen = rand.nextInt(4); 
     response.setContentType("text/html;");
-    response.getWriter().println("<h1>Random Greeting</h1>");
-    response.getWriter().println("<p>" + greetings[greetingChosen] + "</p>");
+    //response.getWriter().println("<h1>Random Greeting</h1>");
+    response.getWriter().println(greetings[greetingChosen]);
 
   }
 
