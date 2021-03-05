@@ -28,18 +28,12 @@ function addRandomFunFacts() {
 }
 
 async function showRandomGreets() {
-    console.log("testing testing");
+
   const responseFromServer = await fetch('/random-greet');
   const textFromResponse = await responseFromServer.json();
 
   const greetContainer = document.getElementById('greet-container');
-  greetContainer.appendChild(
-      createParaElement(textFromResponse.greetMessage));
-    
-}
+  greetContainer.innerHTML = textFromResponse.greetMessage;
 
-function createParaElement(text) {
-  const pElement = document.createElement('p');
-  pElement.innerText = text;
-  return pElement;
+    
 }

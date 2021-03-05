@@ -22,7 +22,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.Random;
 
-/** Servlet that returns HTML that contains the page view count. */
+/** Servlet that returns a random greeting. */
 @WebServlet("/random-greet")
 public class RandomGreetingServlet extends HttpServlet {
 
