@@ -26,3 +26,14 @@ function addRandomFunFacts() {
   const funFactContainer = document.getElementById('funFacts-container');
   funFactContainer.innerText = funFact;
 }
+
+async function showRandomGreets() {
+
+  const responseFromServer = await fetch('/random-greet');
+  const textFromResponse = await responseFromServer.json();
+
+  const greetContainer = document.getElementById('greet-container');
+  greetContainer.innerHTML = textFromResponse.greetMessage;
+
+    
+}
