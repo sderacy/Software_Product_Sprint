@@ -41,6 +41,10 @@ function createMap() {
 
   const map = new google.maps.Map(
       document.getElementById('map'),
-      {center: {lat: 37.422, lng: -122.084}, zoom: 16});
-      
+      {center: {lat: 40.26109076556335, lng: -74.79750265701999}, zoom: 16});
+  
+  const marker = new google.maps.Marker({
+    position: {lat: 40.26109076556335, lng: -74.79750265701999},
+    map: map,
+  });    
 }
