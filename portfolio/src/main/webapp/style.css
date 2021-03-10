@@ -8,6 +8,16 @@
   margin-top: 20px;
 }
 
+#map {
+  border: thin solid black;
+  height: 500px;
+  width: 500px;
+}
+
+#funFacts-container {
+    color: #FFFFFF;
+}
+
 body {
     background-color: #444444;
 }
@@ -44,7 +54,4 @@ ul {
     color: #FFFFFF;
 }
 
-#funFacts-container {
-    color: #FFFFFF;
-}
 
