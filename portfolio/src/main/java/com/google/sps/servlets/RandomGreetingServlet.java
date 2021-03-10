@@ -42,6 +42,7 @@ public class RandomGreetingServlet extends HttpServlet {
     // Send the JSON as the response
     response.setContentType("application/json;");
     response.getWriter().println(json);
+
   }
 
   private String convertToJson(String[] greets, int chosenGreet) {
