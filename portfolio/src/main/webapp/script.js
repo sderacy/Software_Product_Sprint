@@ -60,3 +60,8 @@ function createMap() {
   });
 
 }
+
+function loadPage() {
+    showRandomGreets();
+    createMap();
+}
