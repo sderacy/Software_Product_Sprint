@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html>
+  
   <head>
     <meta charset="UTF-8">
     <title>Sterly Deracy's Portfolio</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9FzxvwpzM9EFYxz0v6MwfSf88r4JIL2E"></script>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
   </head>
-  <body onload = "showRandomGreets();">
+  
+  <body onload = "loadPage();">
     <div id="content">
       <h1>My Portfolio</h1>
       <p>This is my portfolio.</p>
@@ -75,7 +78,7 @@
       <img src="/images/firstdaycruise.jpg" style = "text-align: center; width: 50%; height: 50%" />
       <img src="/images/nasaplace.jpg" style = "float: right; width: 50%; height: 50%"/>
 
-      <p> I love photographing things that remind of memories I have with locations I've gone to. For example,
+      <p> I love photographing things that remind me of the places I've been. For example,
       the leftmost image is me pointing to a bear sign because during this trip in West Virginia to the Cranberry Glades,
       I was concerned with how we were the only people in the park. My friend tried to assure me nothing was wrong until
       I saw red marking on the snow. Obviously bears hibernate but neither of us know where the red marks came from. Could've
@@ -92,10 +95,12 @@
       <p> I picked up video editing as a result of web design. There were numerous times where I just needed to edit an image because
           it didn't look quite right, so it made life easier when I could edit the images myself. I'm not some photoshop wiz, but 
           hopefully by the end of this class I'm currently taking, maybe I will be! </p>
+
+      <div id = "map"></div>   
     </div>
 
     <form action="/form-handler" style = "text-align:center" method="POST">
-        <p>Enter some text here:</p>
+        <p>Contact me:</p>
         <label for="name">Name</label>
         <input id="name" type="text" name="Name">
     
@@ -108,4 +113,5 @@
         <input type="submit" />
     </form>
   </body>
+
 </html>

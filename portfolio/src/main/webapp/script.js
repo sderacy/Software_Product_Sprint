@@ -35,5 +35,33 @@ async function showRandomGreets() {
   const greetContainer = document.getElementById('greet-container');
   greetContainer.innerHTML = textFromResponse.greetMessage;
 
+}
+
+function createMap() {
+
+  const map = new google.maps.Map(
+      document.getElementById('map'),
+      {center: {lat: 40.26109076556335, lng: -74.79750265701999}, zoom: 16});
+  
+  const marker = new google.maps.Marker({
+    position: {lat: 40.26109076556335, lng: -74.79750265701999},
+    map: map,
     
+  });
+
+  const contentString = "<b> Where I'm located <b>";
+
+  const infowindow = new google.maps.InfoWindow({
+    content: contentString,
+  });
+
+  marker.addListener("click", () => {
+    infowindow.open(map, marker);
+  });
+
+}
+
+function loadPage() {
+    showRandomGreets();
+    createMap();
 }

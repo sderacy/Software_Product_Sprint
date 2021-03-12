@@ -26,6 +26,8 @@ public class FormHandlerServlet extends HttpServlet {
     response.getWriter().println("Name: " + name);
     response.getWriter().println("Email: " + email); 
     response.getWriter().println("Favorite Color: " + favoriteColor);  
-    response.sendRedirect("http://sderacy-sps-spring21.appspot.com/");
+    response.sendRedirect("/index.html");
+    
   }
+  
 }
